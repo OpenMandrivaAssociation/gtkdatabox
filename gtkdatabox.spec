@@ -1,11 +1,11 @@
-%define api 0.9.0
+%define api 0.9.1
 %define major 1
 %define libname %mklibname %{name} %{api} %{major}
 %define develname %mklibname %{name} -d
 
 Summary:	A Gtk+-Widget for Fast Data Display
 Name:		gtkdatabox
-Version:	0.9.0.1
+Version:	0.9.1.1
 Release:	%mkrel 1
 License:	LGPLv2+
 Group:		System/Libraries
