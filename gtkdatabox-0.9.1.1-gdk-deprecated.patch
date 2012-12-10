@@ -1,0 +1,104 @@
+diff -urN gtkdatabox-0.9.1.1.orig/gtk/gtkdatabox_bars.c gtkdatabox-0.9.1.1/gtk/gtkdatabox_bars.c
+--- gtkdatabox-0.9.1.1.orig/gtk/gtkdatabox_bars.c	2011-06-25 21:24:24.168596670 -0700
++++ gtkdatabox-0.9.1.1/gtk/gtkdatabox_bars.c	2011-06-25 21:33:48.302358825 -0700
+@@ -17,6 +17,9 @@
+  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+  */
+ 
++/* FIXME: need porting to cairo */
++#undef GDK_DISABLE_DEPRECATED
++
+ #include <gtkdatabox_bars.h>
+ 
+ static void gtk_databox_bars_real_draw (GtkDataboxGraph * bars,
+diff -urN gtkdatabox-0.9.1.1.orig/gtk/gtkdatabox.c gtkdatabox-0.9.1.1/gtk/gtkdatabox.c
+--- gtkdatabox-0.9.1.1.orig/gtk/gtkdatabox.c	2011-06-25 21:24:24.172596770 -0700
++++ gtkdatabox-0.9.1.1/gtk/gtkdatabox.c	2011-06-25 21:33:39.488359126 -0700
+@@ -17,6 +17,9 @@
+  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+  */
+ 
++/* FIXME: need porting to cairo */
++#undef GDK_DISABLE_DEPRECATED
++
+ #include <gtkdatabox.h>
+ #include <gtkdatabox_marshal.h>
+ #include <gtk/gtkhscrollbar.h>
+diff -urN gtkdatabox-0.9.1.1.orig/gtk/gtkdatabox_graph.c gtkdatabox-0.9.1.1/gtk/gtkdatabox_graph.c
+--- gtkdatabox-0.9.1.1.orig/gtk/gtkdatabox_graph.c	2011-06-25 21:24:24.164596569 -0700
++++ gtkdatabox-0.9.1.1/gtk/gtkdatabox_graph.c	2011-06-25 21:34:09.002353964 -0700
+@@ -17,6 +17,9 @@
+  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+  */
+ 
++/* FIXME: need porting to cairo */
++#undef GDK_DISABLE_DEPRECATED
++
+ #include <gtkdatabox_graph.h>
+ #include <gtk/gtkstyle.h>
+ #include <gtk/gtkgc.h>
+diff -urN gtkdatabox-0.9.1.1.orig/gtk/gtkdatabox_grid.c gtkdatabox-0.9.1.1/gtk/gtkdatabox_grid.c
+--- gtkdatabox-0.9.1.1.orig/gtk/gtkdatabox_grid.c	2011-06-25 21:24:24.167596645 -0700
++++ gtkdatabox-0.9.1.1/gtk/gtkdatabox_grid.c	2011-06-25 21:35:26.135286035 -0700
+@@ -17,6 +17,9 @@
+  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+  */
+ 
++/* FIXME: need porting to cairo */
++#undef GDK_DISABLE_DEPRECATED
++
+ #include <gtkdatabox_grid.h>
+ 
+ static void gtk_databox_grid_real_draw (GtkDataboxGraph * grid,
+diff -urN gtkdatabox-0.9.1.1.orig/gtk/gtkdatabox_lines.c gtkdatabox-0.9.1.1/gtk/gtkdatabox_lines.c
+--- gtkdatabox-0.9.1.1.orig/gtk/gtkdatabox_lines.c	2011-06-25 21:24:24.171596745 -0700
++++ gtkdatabox-0.9.1.1/gtk/gtkdatabox_lines.c	2011-06-25 21:36:28.252177144 -0700
+@@ -17,6 +17,9 @@
+  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+  */
+ 
++/* FIXME: need porting to cairo */
++#undef GDK_DISABLE_DEPRECATED
++
+ #include <gtkdatabox_lines.h>
+ 
+ static void gtk_databox_lines_real_draw (GtkDataboxGraph * lines,
+diff -urN gtkdatabox-0.9.1.1.orig/gtk/gtkdatabox_markers.c gtkdatabox-0.9.1.1/gtk/gtkdatabox_markers.c
+--- gtkdatabox-0.9.1.1.orig/gtk/gtkdatabox_markers.c	2011-06-25 21:24:24.172596770 -0700
++++ gtkdatabox-0.9.1.1/gtk/gtkdatabox_markers.c	2011-06-25 21:36:35.574161250 -0700
+@@ -17,6 +17,9 @@
+  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+  */
+ 
++/* FIXME: need porting to cairo */
++#undef GDK_DISABLE_DEPRECATED
++
+ #include <gtkdatabox_markers.h>
+ #include <pango/pango.h>
+ 
+diff -urN gtkdatabox-0.9.1.1.orig/gtk/gtkdatabox_points.c gtkdatabox-0.9.1.1/gtk/gtkdatabox_points.c
+--- gtkdatabox-0.9.1.1.orig/gtk/gtkdatabox_points.c	2011-06-25 21:24:24.170596720 -0700
++++ gtkdatabox-0.9.1.1/gtk/gtkdatabox_points.c	2011-06-25 21:36:41.875147166 -0700
+@@ -17,6 +17,9 @@
+  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+  */
+ 
++/* FIXME: need porting to cairo */
++#undef GDK_DISABLE_DEPRECATED
++
+ #include <gtkdatabox_points.h>
+ 
+ static void gtk_databox_points_real_draw (GtkDataboxGraph * points,
+diff -urN gtkdatabox-0.9.1.1.orig/gtk/gtkdatabox_ruler.c gtkdatabox-0.9.1.1/gtk/gtkdatabox_ruler.c
+--- gtkdatabox-0.9.1.1.orig/gtk/gtkdatabox_ruler.c	2011-06-25 21:24:24.165596595 -0700
++++ gtkdatabox-0.9.1.1/gtk/gtkdatabox_ruler.c	2011-06-25 21:36:57.220110723 -0700
+@@ -27,6 +27,9 @@
+ 
+ /* Modified by Roland Bock 2007, see ChangeLog */
+ 
++/* FIXME: need porting to cairo */
++#undef GDK_DISABLE_DEPRECATED
++
+ #include <gtkdatabox_ruler.h>
+ 
+ #include <math.h>

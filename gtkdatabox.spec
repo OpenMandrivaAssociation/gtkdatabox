@@ -1,20 +1,20 @@
 %define api 0.9.1
-%define major 1
+%define major 3
 %define libname %mklibname %{name} %{api} %{major}
 %define develname %mklibname %{name} -d
 
 Summary:	A Gtk+-Widget for Fast Data Display
 Name:		gtkdatabox
-Version:	0.9.1.1
-Release:	%mkrel 2
+Version:	0.9.1.3
+Release:	1
 License:	LGPLv2+
 Group:		System/Libraries
 URL:		http://www.eudoxos.net/gtk/gtkdatabox/
 Source0:	http://www.eudoxos.net/gtk/gtkdatabox/download/%name-%version.tar.gz
-Patch0:		gtkdatabox-0.9.0.1-linkage.patch
-BuildRequires:	gtk+2-devel
+patch1:		gtkdatabox-0.9.1.1-gtk-2.22.patch
+patch2:		gtkdatabox-0.9.1.1-gdk-deprecated.patch
+BuildRequires:	pkgconfig(gtk+-2.0)
 BuildRequires:	gtk-doc
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 GtkDatabox is a widget for the Gtk+-library designed to display large
@@ -48,21 +48,16 @@ programs/libraries that use %{name}.
 
 %prep
 %setup -q
-%patch0 -p0
+%patch1 -p1
+%patch2 -p1
 
 %build
 autoreconf -fi
-%configure2_5x --disable-static
+%configure2_5x --disable-static LIBS="-lm"
 %make
 
 %install
-rm -rf %{buildroot}
 %makeinstall_std
-
-rm -f %buildroot%{_libdir}/*.la
-
-%clean
-rm -rf %{buildroot}
 
 %files -n %{libname}
 %defattr(-,root,root)
@@ -75,3 +70,15 @@ rm -rf %{buildroot}
 %{_libdir}/*.so
 %{_libdir}/pkgconfig/*.pc
 %{_datadir}/gtk-doc/html/%name
+
+
+%changelog
+* Sun Nov 15 2009 Funda Wang <fundawang@mandriva.org> 0.9.1.1-1mdv2010.1
++ Revision: 466146
+- new version 0.9.1.1
+
+* Tue May 19 2009 Funda Wang <fundawang@mandriva.org> 0.9.0.1-1mdv2010.0
++ Revision: 377612
+- import gtkdatabox
+
+
