@@ -6,7 +6,7 @@
 Summary:	A Gtk+-Widget for Fast Data Display
 Name:		gtkdatabox
 Version:	0.9.1.3
-Release:	1
+Release:	2
 License:	LGPLv2+
 Group:		System/Libraries
 URL:		http://www.eudoxos.net/gtk/gtkdatabox/
