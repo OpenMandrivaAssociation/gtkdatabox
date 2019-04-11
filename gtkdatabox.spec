@@ -1,16 +1,16 @@
-%define api 0.9.3
+%define api 0.9.1
 %define major 1
 %define libname %mklibname %{name} %{api} %{major}
 %define develname %mklibname %{name} -d
 
 Summary:	A Gtk+-Widget for Fast Data Display
-Name:		gtkdatabox
-Version:	0.9.3.1
+Name:		  gtkdatabox
+Version:	0.9.1.1
 Release:	1
 License:	LGPLv2+
 Group:		System/Libraries
-URL:		http://www.eudoxos.net/gtk/gtkdatabox/
-Source0:	http://www.eudoxos.net/gtk/gtkdatabox/download/%name-%version.tar.gz
+URL:		  https://sourceforge.net/projects/gtkdatabox/
+Source0:	https://sourceforge.net/projects/gtkdatabox/files/gtkdatabox/%name-%version.tar.gz
 patch1:		gtkdatabox-0.9.1.1-gtk-2.22.patch
 patch2:		gtkdatabox-0.9.1.1-gdk-deprecated.patch
 BuildRequires:	pkgconfig(gtk+-2.0)
